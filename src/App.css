@@ -1,0 +1,58 @@
+/* CSS */
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    display: inline-block;
+    max-width: 80%; /* Adjust as needed */
+    padding: 8px 12px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.chat-message.self {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+    color: #333;
+
+}
+
+.chat-message.other {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+.message-text {
+    margin-bottom: 4px;
+}
+
+.message-sender {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/*.chat-messages-wrapper {*/
+/*    outline: 1px solid #ccc; !* Add outline *!*/
+/*    padding: 10px; !* Add padding for spacing *!*/
+/*}*/
+
+.custom-image {
+    max-width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+.starry-night {
+    background-color:black;
+    background-image:
+            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
