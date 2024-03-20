@@ -2,7 +2,7 @@ import Feedback from "./Feedback";
 import Button from "./Button";
 import { ChangeEvent, useState } from "react";
 // import css from app
-import 'C:\\Users\\Dominick\\Desktop\\reactfinal\\src\\App.css';
+import '../App.css';
 
 const Chat = () => {
     const [messages, setMessages] = useState<{ email: string; message: string }[]>([]);
