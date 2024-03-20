@@ -1,3 +1,8 @@
+// @ts-ignore
+import ring from '../../public/ring.png';
+
+
+
 const HomePage = () => {
     return (
         <div className="container-fluid |">
@@ -5,7 +10,7 @@ const HomePage = () => {
                 <div className="col-md-6 text-center">
                     <h1>Welcome to Smart Ring</h1>
                     <p className="lead">Control your phone and favorite apps with just a spin!</p>
-                    <img src="../../public/ring.png" alt="Ring Logo" className="img-fluid mt-5" style={{width:'25rem'}}/>
+                    <img src={ring} alt="Ring Logo" className="img-fluid mt-5" style={{width:'25rem'}}/>
                     <button className="btn btn-outline-primary btn-lg mx-5">Get Started</button>
                     <button className="btn btn-outline-success btn-lg mx-5">Learn More</button>
                 </div>
