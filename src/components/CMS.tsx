@@ -77,9 +77,9 @@ const CMS = () => {
                     <div key={entry.id} className={`list-group-item list-group-item-action d-flex justify-content-between align-items-center ${getColorClass(entry)}`}>
                         <div onClick={() => handleEntryClick(entry)} style={{ cursor: 'pointer' }}>
                             <h5 className="mb-1">{entry.heading}</h5>
-                            <small className="text-body-secondary">{entry.timestamp}</small>
+                            <small className="text-body-secondary">Date Uploaded: {entry.timestamp}</small>
                             <p className="mb-1">{entry.content}</p>
-                            <small className="text-body-secondary">{entry.small_text}</small>
+                            <small className="text-body-secondary">Date Due: {entry.small_text}</small>
                         </div>
                         <button className="btn btn-danger btn-sm ms-2" onClick={() => handleRemoveCourse(entry.id)}>Remove Course</button>
                     </div>
@@ -90,51 +90,51 @@ const CMS = () => {
                 <div className="card mx-auto" style={{width: '50rem'}}>
                     <div className="card-body">
                         <h1 className="card-title">Add new Course Information</h1>
-                            <form className="mt-3">
-                                <div className="mb-3">
-                                    <label htmlFor="heading" className="form-label">Heading</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="heading"
-                                        name="heading"
-                                        value={newEntry.heading}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="content" className="form-label">Content</label>
-                                    <textarea
-                                        className="form-control"
-                                        id="content"
-                                        name="content"
-                                        value={newEntry.content}
-                                        onChange={handleInputChange}
-                                        rows={3}
-                                    ></textarea>
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="small_text" className="form-label">Details</label>
-                                    <textarea
-                                        className="form-control"
-                                        id="small_text"
-                                        name="small_text"
-                                        value={newEntry.small_text}
-                                        onChange={handleInputChange}
-                                        rows={1}
-                                    ></textarea>
-                                </div>
-                                <button className="btn btn-primary" onClick={handleAddEntry}>Add Entry</button>
-                            </form>
+                        <form className="mt-3">
+                            <div className="mb-3">
+                                <label htmlFor="heading" className="form-label">Heading</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="heading"
+                                    name="heading"
+                                    value={newEntry.heading}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="content" className="form-label">Content</label>
+                                <textarea
+                                    className="form-control"
+                                    id="content"
+                                    name="content"
+                                    value={newEntry.content}
+                                    onChange={handleInputChange}
+                                    rows={3}
+                                ></textarea>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="small_text" className="form-label">Date Due:</label>
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    id="small_text"
+                                    name="small_text"
+                                    value={newEntry.small_text}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <button className="btn btn-primary" onClick={handleAddEntry}>Add Entry</button>
+                        </form>
                     </div>
                 </div>
             </div>
 
             {/* Modal */}
             {selectedEntry && (
-                <div className="modal show" tabIndex={-1} style={{ display: 'block' }}>
+                <div className="modal show" tabIndex={-1} style={{display: 'block'}}>
                     <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
+                    <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title">{selectedEntry.heading}</h5>
                                 <button type="button" className="btn-close" onClick={handleCloseModal}></button>

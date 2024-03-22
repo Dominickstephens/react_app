@@ -15,16 +15,20 @@ import SignAdmin from "./components/SignAdmin";
 import Search from "./components/Search";
 import Feedback from "./components/Feedback";
 import Landing from "./components/Landing";
-
+import JackLanding from "./components/JackLanding";
 function App() {
 
     const [alertVisible, setAlertVisibility] = useState(false);
 
+
+    const checkURL = () => {
+        let url = window.location.href;
+        return url.includes('jackLanding');
+    }
+
     return (
         <Router>
-            <div>
-                <NavBar/>
-            </div>
+            {checkURL() ? <div></div> : <NavBar/>}
 
             <div>
                 <Switch>
@@ -62,6 +66,9 @@ function App() {
                     </Route>
                     <Route path={"/feedback"}>
                         <Feedback/>
+                    </Route>
+                    <Route path={"/jackLanding"}>
+                        <JackLanding/>
                     </Route>
                 </Switch>
             </div>

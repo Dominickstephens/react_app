@@ -17,8 +17,9 @@ const HomePage = () => {
         <div className="container-fluid |">
             <div className="row justify-content-center">
                 <div className="col-md-6 text-center">
-                    <h1>Welcome to Smart Ring</h1>
+                    <h1>Welcome to Orbital</h1>
                     <p className="lead">Control your phone and favorite apps with just a spin!</p>
+                    <p className="lead">Get started with our Smart Ring today!</p>
                     <img src={ring} alt="Ring Logo" className="img-fluid mt-5" style={{width:'25rem'}}/>
                     <button className="btn btn-outline-primary btn-lg mx-5">Get Started</button>
                     <button className="btn btn-outline-success btn-lg mx-5">Learn More</button>
